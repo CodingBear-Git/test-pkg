@@ -1,0 +1,26 @@
+{
+  "name": "test-pkg",
+  "version": "1.0.0",
+  "description": "test-pkg",
+  "main": "app.js",
+  "type": "module",
+  "pkg": {
+    "assets": [],
+    "ignore": [],
+    "outputPath": "dist/bin",
+    "targets": [
+      "latest-win-x64",
+      "latest-linux-x64",
+      "latest-mac-x64"
+    ]
+  },
+  "scripts": {
+    "createBundle": "node esbuild.config.js",
+    "createBin": "pkg ./dist/app-bundle.js --config package.json"
+  },
+  "author": "",
+  "devDependencies": {
+    "@yao-pkg/pkg": "^6.1.1",
+    "esbuild": "^0.24.0"
+  }
+}
